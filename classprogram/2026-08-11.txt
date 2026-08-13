@@ -1,0 +1,35 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+using namespace std;
+class add{
+    public:
+    int x;
+    int y;
+    int c;
+    void getdata(int a,int b);
+    void display();
+    void operator +();
+};
+void add::getdata(int a,int b){
+    x=a;
+    y=b;
+}
+void add::display(){
+    cout<<"a+b="<<c;
+}
+void add::operator+(){
+    c=x+y;
+}
+int main(){
+    add a;
+    a.getdata(10,20);
+    +a;
+    a.display();
+}
